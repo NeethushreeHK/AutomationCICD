@@ -38,9 +38,9 @@ public void selectcountry(String countryname) {
 }
 
 public Confirmpage submitorder() throws InterruptedException {
-     Thread.sleep(300);
+     Thread.sleep(500);
      JavascriptExecutor js=(JavascriptExecutor)driver;
-     js.executeScript("arguments[0].scrollIntoView({block: 'center'});", submit);
+     js.executeScript("arguments[0].scrollIntoView(false);", submit);
      waitforelement(submit1);
      submit.click();
      Confirmpage confirm=new Confirmpage(driver);
